@@ -13,7 +13,7 @@ app.post("/refresh", (req, res) => {
         redirectUri: process.env.REDIRECT_URI,
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        refreshToken
+        refreshToken,
     })
 
     spotifyApi
@@ -21,6 +21,7 @@ app.post("/refresh", (req, res) => {
         .then(data => {
             res.json({
                 accessToken: data.body.accessToken,
+                refreshToken: data.body.refresh_token,
                 expiresIn: data.body.expiresIn,
             })
         })
@@ -48,8 +49,7 @@ app.post('/login', (req, res) => {
                 expiresIn: data.body.expires_in,
             })
         })
-        .catch(err => {
-            console.log(err);
+        .catch(() => {
             res.sendStatus(400)
         })
 })
