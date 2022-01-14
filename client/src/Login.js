@@ -7,7 +7,7 @@ export default function Login() {
     return <Container className="d-flex justify-content-center align-items-center"
         style={{ minHeight: "100vh" }}>
         <a className="btn btn-success btn-lo" href={AUTH_URL}>
-            Login with Spotify
+            Login with Spoti-Lihay
         </a>
     </Container>
 }
