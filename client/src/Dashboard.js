@@ -7,7 +7,7 @@ import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: "8b945ef10ea24755b83ac50cede405a0",
+    clientId: "a9558e0a39c242d49c5f3557300ef7e2",
 })
 
 export default function Dashboard({ code }) {
