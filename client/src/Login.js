@@ -11,7 +11,7 @@ export default function Login() {
             className="d-flex justify-content-center align-items-center"
             style={{ minHeight: "100vh" }}
         >
-            <a id="btnLogin" className="btn btn-success btn-lg" href={AUTH_URL}>
+            <a className="btn btn-success btn-lg" href={AUTH_URL}>
                 Login With Spoti-Lihay
             </a>
         </Container>
