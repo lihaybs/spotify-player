@@ -16,6 +16,8 @@ export default function Dashboard({ code }) {
     const [searchResults, setSearchResults] = useState([])
     const [playingTrack, setPlayingTrack] = useState()
     const [lyrics, setLyrics] = useState("")
+    const [myPlayList, setMyPlayList] = useState()
+
 
     function chooseTrack(track) {
         setPlayingTrack(track)
@@ -44,6 +46,7 @@ export default function Dashboard({ code }) {
     }, [accessToken])
 
     useEffect(() => {
+        console.log(accessToken);
         if (!search) return setSearchResults([])
         if (!accessToken) return
 
